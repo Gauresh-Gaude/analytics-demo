@@ -2,6 +2,15 @@
 <html>
 <head>
 <title>Analytics Demo</title>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9QZW0P07Q5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9QZW0P07Q5');
+</script>
 </head>
 <body>
 <h1>Welcome to the Demo Website</h1>
@@ -10,6 +19,10 @@
 <script>
 function trackClick() {
 alert("Button clicked");
+gtag('event', 'button_click', {
+'event_category': 'engagement',
+'event_label': 'demo_button'
+});
 }
 </script>
 </body>
